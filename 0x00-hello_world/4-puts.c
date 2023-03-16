@@ -6,8 +6,8 @@
 #include <stdio.h>
 
 /*
- * main - Prints "Programmini is like building a multilingual puzzle,
- *        followed by a new line.
+ * main: Prints "Programmini is like building a multilingual puzzle,
+ *       followed by a new line.
  *
  * Return: Always 0.
 */
