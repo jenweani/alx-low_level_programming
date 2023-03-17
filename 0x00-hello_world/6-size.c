@@ -6,9 +6,9 @@
 #include <stdio.h>
 
 /**
- * main - prints out all the sizes of the various types
+ * main - Prints out all the sizes of the various types
  *        based on the computer it is running on
- * Return Always return 0
+ * Return: Always return 0
 */
 
 int main(void)
