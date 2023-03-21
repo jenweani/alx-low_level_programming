@@ -8,6 +8,8 @@
 
 /**
  * _islower - checks if the input is a lower case alphabet
+ * @c: the character to be checked
+ *
  * Return: returns 1 if input is lowercase alphabet otherwise returns 0
 */
 
