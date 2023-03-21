@@ -3,7 +3,7 @@
  * Author: John Enweani <jenweani@gmail.com>
 */
 
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - Prints out _putchar
