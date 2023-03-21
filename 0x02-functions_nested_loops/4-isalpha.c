@@ -10,7 +10,7 @@
  * _isalpha - checks if the input is an alphabet
  * @c: input character
  *
- * Returns: 1 if input is alphabet, 0 otherwise
+ * Return: 1 if input is alphabet, 0 otherwise
 */
 
 int _isalpha(char c)
