@@ -11,9 +11,9 @@
  * Return: returns 1 if input is lowercase alphabet otherwise returns 0
 */
 
-int _islower(char)
+int _islower(char c)
 {
-	if(islower(char))
+	if(islower(c))
 	{
 		return (1);
 	}else
