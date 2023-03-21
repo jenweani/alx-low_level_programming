@@ -7,9 +7,10 @@
 
 /**
  * print_sign - prints the sign of a number
- * @c: the input int 
+ * @c: the input int
  *
- * Return: returns + if the input is greater than zero, 0 if input is zero and - if input is less than zero
+ * Return: returns + if the input is greater than zero, 
+ * 0 if input is zero and - if input is less than zero
 */
 
 int print_sign(int n)
