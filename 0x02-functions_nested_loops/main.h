@@ -6,6 +6,6 @@
  * Author: John Enweani
  * Desc: Header file containing all function declaration*/
 
-char _putchar(char c);
+int _putchar(char c);
 
 #endif
