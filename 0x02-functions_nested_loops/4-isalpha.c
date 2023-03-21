@@ -8,12 +8,12 @@
 
 /**
  * _isalpha - checks if the input is an alphabet
- * @c - input character
+ * @c: input character
  *
  * Returns: 1 if input is alphabet, 0 otherwise
 */
 
-int _isalpha (char c)
+int _isalpha(char c)
 {
 	if (isalpha(c))
 	{
