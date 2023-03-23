@@ -8,6 +8,7 @@
 
 /**
  * _isupper - checks if the input is an uppercase alphabet
+ * @c: char input is received as  int
  *
  * Return: 1 if the input is uppercase, 0 otherwise
 */
