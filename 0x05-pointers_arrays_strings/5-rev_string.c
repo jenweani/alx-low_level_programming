@@ -14,12 +14,16 @@
 
 void rev_string (char *s)
 {
-	int i;
-	int len = strlen(s);
-	char s_cpy[len];
+	int i = 0, len = 0;
+	char tmp;
 
-	strcpy(s_cpy, s);
+	while (s[i++])
+		len++;
 
-	for (i = len - 1; i >= 0; i--)
-		s[len-1-i] = s_cpy[i];
+	for (i = len - 1; i >= len / 2; i--)
+	{
+		tmp = s[i];
+		s[i] = s[len - i - 1];
+		s[len - i - 1] = tmp;
+	}
 }
