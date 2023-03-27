@@ -10,7 +10,7 @@
  * @str: input string arg
 */
 
-void puts@(char *str)
+void puts2(char *str)
 {
 	int i = 0, len = 0;
 
