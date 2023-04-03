@@ -17,5 +17,14 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	return (memset(&s, b, n*sizeof(*s)));
+	unsigned int i;
+
+	i = 0;
+	while (i < n)
+	{
+		s[i] = b;
+		i++;
+	}
+
+	return (s);
 }
