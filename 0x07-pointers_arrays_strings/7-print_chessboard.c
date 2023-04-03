@@ -1,6 +1,7 @@
 /*
  * File: 7-print_chessboard.c
- * Author: John Enweani*/
+ * Author: John Enweani
+*/
 
 #include "main.h"
 
