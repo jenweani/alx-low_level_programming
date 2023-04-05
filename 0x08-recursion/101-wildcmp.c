@@ -78,7 +78,8 @@ char *postfix_match(char *str, char *postfix)
  * @s1: The first string to be compared.
  * @s2: The second string to be compared - may contain wildcards.
  *
- * Return: returns 1 if the strings can be considered identical, otherwise return 0
+ * Return: returns 1 if the strings can be considered identical,
+ * otherwise return 0
  */
 int wildcmp(char *s1, char *s2)
 {
