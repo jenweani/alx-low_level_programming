@@ -10,7 +10,7 @@
  *  of x raised to the value of y
  * @x: number to be multiplied
  * @y: power to be raised to
- * 
+ *
  * Return: the value of x raised to power of y
 */
 int _pow_recursion(int x, int y)
