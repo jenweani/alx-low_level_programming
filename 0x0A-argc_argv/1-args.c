@@ -12,7 +12,7 @@
  *
  * Return: always 0
 */
-int main(int __attribute__((__unused__)) argc, *argv[])
+int main(int argc, char __attribute__((__unused__)) *argv[])
 {
 	printf("%d\n", argc);
 
