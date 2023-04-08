@@ -31,7 +31,8 @@ int calc_change(int change)
 }
 
 /**
- * main - program that prints the minimum number of coins *  to make change for an amount of money
+ * main - program that prints the minimum number of coins 
+ *  to make change for an amount of money
  * @argc: argument count
  * @argv: argument vector
  *
@@ -45,14 +46,12 @@ int main(int argc, char *argv[])
 	if (argc != 2)
 	{
 		printf("Error\n");
-
 		return (1);
 	}
 
 	if (atoi(argv[1]) < 0)
 	{
 		printf("0\n");
-
 		return (0);
 	}
 
