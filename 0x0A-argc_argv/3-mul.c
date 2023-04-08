@@ -4,6 +4,7 @@
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - program that multiplies two numbers
@@ -20,13 +21,13 @@ int main(int argc, char *argv[])
 	if (argv[1] && argv[2])
 	{
 		for (i = 1; i < argc; i++)
-			result *= argv[i];
-		printf("%d", result);
+			result *= atoi(argv[i]);
+		printf("%d\n", result);
 		return (0);
 	}
 	else
 	{
-		printf("Error");
+		printf("Error\n");
 		return (1);
 	}
 }
