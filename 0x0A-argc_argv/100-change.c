@@ -41,6 +41,7 @@ int calc_change(int change)
 int main(int argc, char *argv[])
 {
 	int change;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -51,6 +52,7 @@ int main(int argc, char *argv[])
 	if (atoi(argv[1]) < 0)
 	{
 		printf("0\n");
+
 		return (0);
 	}
 
