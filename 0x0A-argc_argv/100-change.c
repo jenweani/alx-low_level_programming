@@ -49,7 +49,10 @@ int main(int argc, char *argv[])
 	}
 
 	if (atoi(argv[1]) < 0)
+	{
 		printf("0\n");
+		return (0);
+	}
 
 	change = calc_change(atoi(argv[1]));
 	printf("%d\n", change);
