@@ -22,6 +22,8 @@ int calc_change(int change)
 		return (1 + calc_change(change - 10));
 	else if (change >= 5)
 		return (1 + calc_change(change - 5));
+	else if (change >= 2)
+		return (1 + calc_change(change - 2));
 	else if (change >= 1)
 		return (1 + calc_change(change - 1));
 	else
