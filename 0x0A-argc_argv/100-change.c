@@ -1,7 +1,7 @@
 /*
  * File: 100-change.c
  * Auth: John Enweani
-*/
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -13,8 +13,8 @@
  * @argv: argument vector
  *
  * Return: 1 if the number of arguments passed to your
- *  program is not exactly 1, 0 otherwise
-*/
+ *	program is not exactly 1, 0 otherwise
+ */
 int main(int argc, char *argv[])
 {
 	int change = 0, num;
