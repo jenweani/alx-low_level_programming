@@ -17,7 +17,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int change = 0, num;
+	int num, change = 0;
 
 	if (argc != 2)
 	{
