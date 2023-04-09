@@ -1,6 +1,6 @@
 /*
  * File: 100-change.c
- * Author: John Enweani
+ * Auth: John Enweani
 */
 
 #include <stdio.h>
