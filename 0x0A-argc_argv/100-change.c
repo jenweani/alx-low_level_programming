@@ -6,30 +6,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int calc_change(int change);
-
-/**
- * calc_change - calculate the amount of coins for change
- * @change: amount to be calculated
- *
- * Return: number of change
-*/
-int calc_change(int change)
-{
-	if (change >= 25)
-		return (1 + calc_change(change - 25));
-	else if (change >= 10)
-		return (1 + calc_change(change - 10));
-	else if (change >= 5)
-		return (1 + calc_change(change - 5));
-	else if (change >= 2)
-		return (1 + calc_change(change - 2));
-	else if (change >= 1)
-		return (1 + calc_change(change - 1));
-	else
-		return (change);
-}
-
 /**
  * main - program that prints the minimum number of coins 
  *  to make change for an amount of money
@@ -41,7 +17,7 @@ int calc_change(int change)
 */
 int main(int argc, char *argv[])
 {
-	int change, num;
+	int change = 0, num;
 
 	if (argc != 2)
 	{
@@ -51,13 +27,32 @@ int main(int argc, char *argv[])
 
 	num = atoi(argv[1]);
 
-	if (num < 0)
+	while (num > 0)
 	{
-		printf("0\n");
-		return (0);
+		change++;
+		if ((num - 25) >= 0)
+		{
+			num -= 25;
+			continue;
+		}
+		if ((num - 10) >= 0)
+		{
+			num -= 10;
+			continue;
+		}
+		if ((num - 5) >= 0)
+		{
+			num -= 5;
+			continue;
+		}
+		if ((num - 2) >= 0)
+		{
+			num -= 2;
+			continue;
+		}
+		num--;
 	}
 
-	change = calc_change(num);
 	printf("%d\n", change);
 
 	return (0);
