@@ -42,6 +42,7 @@ int calc_change(int change)
 int main(int argc, char *argv[])
 {
 	int change;
+	int num = atoi(argv[1]);
 
 	if (argc != 2)
 	{
@@ -49,13 +50,13 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	if (atoi(argv[1]) < 0)
+	else if (num < 0)
 	{
 		printf("0\n");
 		return (0);
 	}
 
-	change = calc_change(atoi(argv[1]));
+	change = calc_change(num);
 	printf("%d\n", change);
 
 	return (0);
