@@ -41,8 +41,9 @@ int calc_change(int change)
 */
 int main(int argc, char *argv[])
 {
-	int change;
-	int num = atoi(argv[1]);
+	int change, num;
+
+	num = atoi(argv[1]);
 
 	if (argc != 2)
 	{
