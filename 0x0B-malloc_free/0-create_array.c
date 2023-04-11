@@ -20,7 +20,7 @@ char *create_array(unsigned int size, char c)
 	int i = 0;
 
 	arr = malloc(sizeof(*arr) * size);
-	while (i < size)
+	while (i < (int) size)
 	{
 		arr[i] = c;
 		i++;
