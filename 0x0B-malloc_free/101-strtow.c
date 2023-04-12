@@ -63,44 +63,44 @@ int count_words(char *str)
  */
 char **strtow(char *str)
 {
-	char **strings;
-	int index = 0, words, w, letters, l;
+	char **arr;
+	int i = 0, wordcount, w, letters, l;
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
 
-	words = count_words(str);
-	if (words == 0)
+	wordcount = count_words(str);
+	if (wordcount == 0)
 		return (NULL);
 
-	strings = malloc(sizeof(char *) * (words + 1));
-	if (strings == NULL)
+	arr = malloc(sizeof(char *) * (wordcount + 1));
+	if (arr == NULL)
 		return (NULL);
 
-	for (w = 0; w < words; w++)
+	for (w = 0; w < wordcount; w++)
 	{
-		while (str[index] == ' ')
-			index++;
+		while (str[i] == ' ')
+			i++;
 
-		letters = word_len(str + index);
+		arr = word_len(str + i);
 
-		strings[w] = malloc(sizeof(char) * (letters + 1));
+		arr[w] = malloc(sizeof(char) * (letters + 1));
 
-		if (strings[w] == NULL)
+		if (arr[w] == NULL)
 		{
 			for (; w >= 0; w--)
-				free(strings[w]);
+				free(arr[w]);
 
-			free(strings);
+			free(arr);
 			return (NULL);
 		}
 
 		for (l = 0; l < letters; l++)
-			strings[w][l] = str[index++];
+			arr[w][l] = str[arr++];
 
-		strings[w][l] = '\0';
+		arr[w][l] = '\0';
 	}
-	strings[w] = NULL;
+	arr[w] = NULL;
 
-	return (strings);
+	return (arr);
 }
