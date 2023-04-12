@@ -82,7 +82,7 @@ char **strtow(char *str)
 		while (str[i] == ' ')
 			i++;
 
-		arr = word_len(str + i);
+		letters = word_len(str + i);
 
 		arr[w] = malloc(sizeof(char) * (letters + 1));
 
@@ -96,7 +96,7 @@ char **strtow(char *str)
 		}
 
 		for (l = 0; l < letters; l++)
-			arr[w][l] = str[arr++];
+			arr[w][l] = str[i++];
 
 		arr[w][l] = '\0';
 	}
