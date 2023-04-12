@@ -39,11 +39,11 @@ char *argstostr(int ac, char **av)
 			string[k] = av[i][j];
 			k++;
 		}
-		string[k] = "\n";
+		string[k] = '\n';
 		k++;
 	}
 
-	string[len] = "\0";
+	string[len] = '\0';
 
 	return (string);
 }
