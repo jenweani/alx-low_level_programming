@@ -14,22 +14,20 @@
  */
 char **strtow(char *str)
 {
-	int k, j = 0, i = 0, len = 0, wordlen = 0;
+	int k, j = 0, i, len = 0, wordlen = 0;
 	char **arr;
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
 
-	while (str[i])
+	for (i = 0; str[i]; i++)
 	{
 		if (str[i] == ' ' || str[i] == '	')
 			len++;
-		i++;
 	}
 
 	arr = malloc(sizeof(*arr) * len);
-	i = 0;
-	while (str[i])
+	for (i = 0; str[i]; i++)
         {
 		wordlen++;
                 if (str[i] == ' ' || str[i] == '	')
@@ -38,13 +36,11 @@ char **strtow(char *str)
 			j++;
 			wordlen = 0;
 		}
-                i++;
         }
 
-	i = 0;
 	j = 0;
 	k = 0;
-        while (str[i])
+	for (i = 0; str[i]; i++)
 	{	
                 if (str[i] == ' ' || str[i] == '	')
                 {
@@ -53,7 +49,6 @@ char **strtow(char *str)
 			k++;
                 }
 		arr[j][k] = str[i];
-                i++;
         }
 	arr[len] = NULL;
 
