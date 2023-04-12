@@ -6,6 +6,55 @@
 #include "main.h"
 #include <stdlib.h>
 
+int word_len(char *str);
+int count_words(char *str);
+char **strtow(char *str);
+
+/**
+ * word_len - Locates the index marking the end of the
+ *            first word contained within a string.
+ * @str: The string to be searched.
+ *
+ * Return: The index marking the end of the initial word pointed to by str.
+ */
+int word_len(char *str)
+{
+	int index = 0, len = 0;
+
+	while (*(str + index) && *(str + index) != ' ')
+	{
+		len++;
+		index++;
+	}
+
+	return (len);
+}
+
+/**
+ * count_words - Counts the number of words contained within a string.
+ * @str: The string to be searched.
+ *
+ * Return: The number of words contained within str.
+ */
+int count_words(char *str)
+{
+	int index = 0, words = 0, len = 0;
+
+	for (index = 0; *(str + index); index++)
+		len++;
+
+	for (index = 0; index < len; index++)
+	{
+		if (*(str + index) != ' ')
+		{
+			words++;
+			index += word_len(str + index);
+		}
+	}
+
+	return (words);
+}
+
 /**
  * strtow - function that splits a string into words
  * @str: string to be split
@@ -14,43 +63,44 @@
  */
 char **strtow(char *str)
 {
-	int k, j = 0, i, len = 0, wordlen = 0;
-	char **arr;
+	char **strings;
+	int index = 0, words, w, letters, l;
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
 
-	for (i = 0; str[i]; i++)
+	words = count_words(str);
+	if (words == 0)
+		return (NULL);
+
+	strings = malloc(sizeof(char *) * (words + 1));
+	if (strings == NULL)
+		return (NULL);
+
+	for (w = 0; w < words; w++)
 	{
-		if (str[i] == ' ' || str[i] == '	')
-			len++;
-	}
+		while (str[index] == ' ')
+			index++;
 
-	arr = malloc(sizeof(*arr) * len);
-	for (i = 0; str[i]; i++)
-        {
-		wordlen++;
-                if (str[i] == ' ' || str[i] == '	')
+		letters = word_len(str + index);
+
+		strings[w] = malloc(sizeof(char) * (letters + 1));
+
+		if (strings[w] == NULL)
 		{
-			arr[j] = malloc(sizeof(*arr[j]) * wordlen);
-			j++;
-			wordlen = 0;
+			for (; w >= 0; w--)
+				free(strings[w]);
+
+			free(strings);
+			return (NULL);
 		}
-        }
 
-	j = 0;
-	k = 0;
-	for (i = 0; str[i]; i++)
-	{	
-                if (str[i] == ' ' || str[i] == '	')
-                {
-                        arr[j][k] = '\0';
-			j++;
-			k++;
-                }
-		arr[j][k] = str[i];
-        }
-	arr[len] = NULL;
+		for (l = 0; l < letters; l++)
+			strings[w][l] = str[index++];
 
-	return (arr);
+		strings[w][l] = '\0';
+	}
+	strings[w] = NULL;
+
+	return (strings);
 }
