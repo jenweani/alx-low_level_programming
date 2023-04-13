@@ -14,9 +14,14 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	void *memory = malloc(b);
-	if (memory == NULL)
-		exit(98);
+	void *memm;
 
-	return (memory);
+	memm = malloc(b);
+	if (memm == NULL)
+	{
+		free(memm);
+		exit(98);
+	}
+	return (memm);
 }
+
