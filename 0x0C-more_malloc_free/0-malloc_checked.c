@@ -14,10 +14,12 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	void *memory = malloc(b);
+	void *memory;
+	
+	memory = malloc(b);
 
 	if (memory == NULL)
-	{
+	
 		free(memory);
 		exit(98);
 	}
