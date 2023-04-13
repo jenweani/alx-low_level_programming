@@ -3,6 +3,10 @@
  * Auth: John Enweani
  */
 
+#include <stdlib.h>
+#include <stdio.h>
+#include "main.h"
+
 /**
  * is_digit - checks for digit
  *
