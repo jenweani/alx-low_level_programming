@@ -17,11 +17,10 @@ void *malloc_checked(unsigned int b)
 	void *memm;
 
 	memm = malloc(b);
+
 	if (memm == NULL)
-	{
-		free(memm);
 		exit(98);
-	}
+
 	return (memm);
 }
 
