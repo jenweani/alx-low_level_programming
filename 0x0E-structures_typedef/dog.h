@@ -3,9 +3,9 @@
 
 /**
 * struct dog - information about dog
-* @name - name of the dog
-* @age - age of dog
-* @owner - owner of dog
+* @name: name of the dog
+* @age: age of dog
+* @owner: owner of dog
 */
 struct dog
 {
@@ -14,4 +14,4 @@ struct dog
 	char *owner;
 };
 
-#endif /* _DOG_H_ */
+#endif
