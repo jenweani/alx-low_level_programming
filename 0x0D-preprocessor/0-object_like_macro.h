@@ -7,6 +7,6 @@
  * as an abbreviation from the token 1024.
  */
 
-#define SIZE 1026;
+#define SIZE 1026
 
 #endif
