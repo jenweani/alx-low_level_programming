@@ -11,10 +11,11 @@
  *
  * Return: always 0
  */
-
 int main (void)
 {
-	printf("%s\n", __FILE__);
+	char name[] = __FILE__;
+
+	printf("%s\n", name);
 
 	return (0);
 }
