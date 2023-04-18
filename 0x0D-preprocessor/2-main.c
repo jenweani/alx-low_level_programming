@@ -14,9 +14,7 @@
 
 int main (void)
 {
-	char name[] = __FILE__;
-
-	printf("%s\n", name);
+	printf("%s\n", __FILE__);
 
 	return (0);
 }
