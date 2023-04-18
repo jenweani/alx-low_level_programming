@@ -1,4 +1,4 @@
-/*i
+/*
  * File: 5-free_dog.c
  * Auth: John Enweani
  */
