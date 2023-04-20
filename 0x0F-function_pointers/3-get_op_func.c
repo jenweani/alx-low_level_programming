@@ -7,8 +7,7 @@
 #include <stdlib.h>
 
 /**
- * get_op_func - Selects the correct function to perform
- *  the operation asked by the user
+ * get_op_func - Selects the function to perform the operation
  * @s: op passed as argument
  *
  * Return: pointer to function relating to the op given as parameter
