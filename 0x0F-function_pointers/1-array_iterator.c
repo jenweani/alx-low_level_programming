@@ -11,7 +11,8 @@
  *  as a parameter on each element of an array
  * @array: array to be modified
  * @size: size of the array
- * @action: function pointer to func to be executed on each parameter*/
+ * @action: function pointer to func to be executed on each parameter
+ */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	int i;
